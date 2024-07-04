@@ -27,7 +27,7 @@ if (isset($_GET['entry_num'])) {
 <head>
     <meta charset="UTF-8">
     <title>Judge Panel</title>
-    <link rel="stylesheet" href="../festive/css/navigation.css?v=1.0">
+    <link rel="stylesheet" href="../festive/css/navigation.css">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const lastClickedEntryNum = '<?php echo isset($_SESSION["last_clicked_entry_num"]) ? $_SESSION["last_clicked_entry_num"] : ""; ?>';

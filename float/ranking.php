@@ -5,18 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JUDGING SHEET</title>
-    <link rel="stylesheet" href="/float/css/float.css">
+    <link rel="stylesheet" href="/float/css/float.css?v=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        .top10 {
+            background-color: blue;
+            color: white;
+        }
+
+        .judge-signatures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .judge-signature {
+            text-align: center;
+            width: 45%;
+        }
+
+        .judge-signature .line {
+            border-bottom: 1px solid black;
+            margin-bottom: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #e7ecef;
+            border: none;
+            color: #030404;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .no-underline {
+            text-decoration: none;
+
+        }
+    </style>
 </head>
 
 <body>
+
     <div class="tnalaklogo">
         <img src="../tnalak.png" alt="t'nalak image">
+
     </div>
-    <div class="deduction">
-                    <button><strong>Deduction</strong></button>
-                </div> 
+    <div class="twobuttons" style="margin-bottom:83vh; margin-top:0vh">
+        <a href="/float/overallranking.php"><button class="button" style="margin-bottom:10%;"><strong>Overall Results</strong></button></a>
+
+        <!-- <button class="button button5">BACK</button> -->
+    </div>
     <div class="emblem">
         <img src="../emblem.png" alt="t'nalak image">
     </div>

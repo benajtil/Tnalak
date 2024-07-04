@@ -16,11 +16,14 @@ if (isset($_SESSION['username'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CIVIC PARADE</title>
-  <link rel="stylesheet" type="text/css" href="./float/css/style.css">
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
+<div class="background_image">
+        <img src="images/tnalakbg.png" alt="T'nalak Background" class="background_image">
+    </div>
   <div class="container">
     <div class="screen">
       <img src="/images/Eulap.png" alt="eulap" class="eulaplogo">
@@ -47,6 +50,7 @@ if (isset($_SESSION['username'])) {
       </div>
     </div>
   </div>
+  
   <script src="js/login.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {

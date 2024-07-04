@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOST FESTIVE CONTIGENT</title>
-    <link rel="stylesheet" href="../float/css/judgeTable.css?v=1.0">
+    <link rel="stylesheet" href="../festive/css/judgeTableFestive.css?v=1.0">
 </head>
 <body>
 <?php 
@@ -55,7 +55,7 @@ if ($stmt->num_rows > 0) {
     echo "<script>
             window.onload = function() {
                 alert('You have already scored this contestant.');
-                window.location.href = 'judgeTable.php';
+                window.location.href = 'judgeTableFestive.php';
             };
           </script>";
     $stmt->close();
@@ -72,16 +72,16 @@ $stmt->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Festive</title>
-    <link rel="stylesheet" href="../festive/css/judgeTable.css?v=1.0">
 </head>
 <body>
 <div class="container">
 <div class="contestantname"> 
+<h1><?php echo '<strong>Contestant ' . htmlspecialchars($entry_num) . '</strong></a>'; ?> </h1>
 
 </div>
     <h1>SEARCH FOR MOST FESTIVE CONTINGENT</h1>
     <form action="submit_score.php" method="post" onsubmit="return confirmSubmission()">
-        <input type="hidden" id="entry_num" name="entry_num" value="<?php echo htmlspecialchars($entry_num); ?>">
+    <input type="hidden" id="entry_num" name="entry_num" value="<?php echo htmlspecialchars($entry_num); ?>">
         <div class="form-group">
             <label for="festive_spirit">Festive Spirit of Parade Participants (50%)</label>
             <input id="festive_spirit" placeholder ="1-50" name="festive_spirit" type="number" min="1" max="50" required>
@@ -89,7 +89,7 @@ $stmt->close();
 
         </div>
         <div class="form-group">
-            <label for="costume_and_props">COSTUME AND PROPS (30%)</label>
+            <label for="costume_and_props">Costume and Props (30%)</label>
             <input id="costume_and_props" name="costume_and_props" type="number" min="1" max="20" placeholder ="1-20" required>
             <p>(Creativity, Uniqueness)</p>
         </div>

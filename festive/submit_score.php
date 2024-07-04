@@ -19,6 +19,7 @@ $entry_num = $_POST['entry_num'];
 $festive_spirit = $_POST['festive_spirit'];
 $costume_and_props = $_POST['costume_and_props'];
 $relevance_to_the_theme = $_POST['relevance_to_the_theme'];
+$total_score = $festive_spirit + $costume_and_props + $relevance_to_the_theme;
 
 // Check if the judge has already scored this contestant
 $checkJudgeScoreSql = "SELECT * FROM scores WHERE entry_num = ? AND judge_name = ?";
@@ -34,13 +35,13 @@ if ($stmt->num_rows > 0) {
 $stmt->close();
 
 // Insert the new score
-$insertScoreSql = "INSERT INTO scores (entry_num, judge_name, festive_spirit, costume_and_props, relevance_to_the_theme) VALUES (?, ?, ?, ?, ?)";
+$insertScoreSql = "INSERT INTO scores (entry_num, judge_name, festive_spirit, costume_and_props, relevance_to_the_theme, total_score) VALUES (?, ?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($insertScoreSql);
-$stmt->bind_param("isiii", $entry_num, $judge_name, $festive_spirit, $costume_and_props, $relevance_to_the_theme);
+$stmt->bind_param("isiiii", $entry_num, $judge_name, $festive_spirit, $costume_and_props, $relevance_to_the_theme, $total_score);
 $stmt->execute();
 $stmt->close();
 
-$compiled_scores = $festive_spirit + $costume_and_props + $relevance_to_the_theme;
+$compiled_scores = $total_score;
 
 $fetchAllScoresSql = "SELECT festive_spirit, costume_and_props, relevance_to_the_theme FROM scores WHERE entry_num = ?";
 $stmt = $conn->prepare($fetchAllScoresSql);

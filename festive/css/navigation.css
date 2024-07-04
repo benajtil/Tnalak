@@ -105,3 +105,9 @@
   background-color: rgb(107, 147, 255);
   transform: translateY(2px);
 }
+
+.judgeName h1{
+  position: fixed;
+  bottom: 0;
+  margin-bottom:10px;
+}

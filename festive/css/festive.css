@@ -115,6 +115,7 @@ th {
 
 tr td:hover {
   background-color: rgb(42, 14, 156);
+  color:white;
 }
 
 .container_ranking {

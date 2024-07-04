@@ -27,12 +27,55 @@
             border-bottom: 1px solid black;
             margin-bottom: 5px;
         }
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #e7ecef;
+            border: none;
+            color: #030404;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
     </style>
 </head>
 
 <body>
     <div class="tnalaklogo">
         <img src="../tnalak.png" alt="t'nalak image">
+    </div>
+    <div class="twobuttons" style="margin-bottom:83vh; margin-top:0vh">
+        <a href="judgesfestive.php"><button class="button" style="margin-bottom:10%;"><strong>Judges</strong></button></a>
     </div>
     <div class="emblem">
         <img src="../emblem.png" alt="t'nalak image">
